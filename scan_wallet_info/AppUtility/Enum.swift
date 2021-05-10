@@ -1,11 +1,3 @@
-//
-//  Enum.swift
-//  RedButton
-//
-//  Created by Zignuts Technolab on 27/03/18.
-//  Copyright © 2018 Zignuts Technolab. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

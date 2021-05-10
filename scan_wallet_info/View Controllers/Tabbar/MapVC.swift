@@ -1,10 +1,3 @@
-//
-//  MapVC.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 02/05/21.
-//
-
 import UIKit
 import Firebase
 import GoogleMaps

@@ -1,11 +1,3 @@
-//
-//  HomeVC.swift
-//  Zhen Demo
-//
-//  Created by Teddys on 23/05/20.
-//  Copyright © 2020 Teddys. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
