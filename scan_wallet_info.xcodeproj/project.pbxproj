@@ -116,6 +116,7 @@
 		00F995F82623518B00E975B0 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 00F995E62623518A00E975B0 /* Poppins-Medium.otf */; };
 		00F995F92623518B00E975B0 /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 00F995E72623518B00E975B0 /* Poppins-Bold.otf */; };
 		9FA231832648D2FB00E73E0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FA231822648D2FB00E73E0C /* GoogleService-Info.plist */; };
+		D06E89032648E2340068A236 /* MapboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E89022648E2340068A236 /* MapboxVC.swift */; };
 		E0CA419184CFCBFFA1C24789 /* Pods_scan_wallet_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9050D493974C69AA37928166 /* Pods_scan_wallet_info.framework */; };
 /* End PBXBuildFile section */
 
@@ -276,6 +277,7 @@
 		9050D493974C69AA37928166 /* Pods_scan_wallet_info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scan_wallet_info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA231822648D2FB00E73E0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB0F190E6700C7B3651C6075 /* Pods-scan_wallet_info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scan_wallet_info.debug.xcconfig"; path = "Target Support Files/Pods-scan_wallet_info/Pods-scan_wallet_info.debug.xcconfig"; sourceTree = "<group>"; };
+		D06E89022648E2340068A236 /* MapboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -520,6 +522,7 @@
 				0088E850263DDD86008D0D79 /* MapVC.swift */,
 				005B4FEC26276B6A0022B1B8 /* SettingVC.swift */,
 				00F994F3262344F400E975B0 /* ProfileVC.swift */,
+				D06E89022648E2340068A236 /* MapboxVC.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -744,7 +747,7 @@
 				001783B126233A5F007BE6A3 /* Frameworks */,
 				001783B226233A5F007BE6A3 /* Resources */,
 				85B9BB393B2CBB2C45AA2890 /* [CP] Embed Pods Frameworks */,
-				D7012548D94F8E58E86E5A6E /* [CP] Copy Pods Resources */,
+				D2DE57AA30087B901553EC95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -860,7 +863,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scan_wallet_info/Pods-scan_wallet_info-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7012548D94F8E58E86E5A6E /* [CP] Copy Pods Resources */ = {
+		D2DE57AA30087B901553EC95 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -917,6 +920,7 @@
 				0088E84A263DDA52008D0D79 /* GQTPointQuadTree.m in Sources */,
 				0088E843263DDA52008D0D79 /* GMUFeature.m in Sources */,
 				00F995A8262348E800E975B0 /* DropdownPresentationController.swift in Sources */,
+				D06E89032648E2340068A236 /* MapboxVC.swift in Sources */,
 				0088E851263DDD86008D0D79 /* MapVC.swift in Sources */,
 				0008BD092625F73700B56571 /* Create_BusinessCardStepVC.swift in Sources */,
 				00E51C17262B408F00D62DD9 /* ScanVC.swift in Sources */,

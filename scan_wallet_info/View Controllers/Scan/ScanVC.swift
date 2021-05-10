@@ -1,10 +1,3 @@
-//
-//  ScanVC.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 17/04/21.
-//
-
 import UIKit
 import AVFoundation
 

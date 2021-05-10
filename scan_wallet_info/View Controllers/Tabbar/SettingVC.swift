@@ -1,10 +1,3 @@
-//
-//  SettingVC.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 14/04/21.
-//
-
 import UIKit
 
 class SettingVC: UIViewController {

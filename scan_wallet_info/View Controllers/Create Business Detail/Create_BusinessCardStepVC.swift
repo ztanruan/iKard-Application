@@ -1,10 +1,3 @@
-//
-//  Create_BusinessCardStep1VC.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 13/04/21.
-//
-
 import UIKit
 import FirebaseStorage
 import FirebaseDatabase

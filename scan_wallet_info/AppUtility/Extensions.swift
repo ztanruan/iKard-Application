@@ -1,11 +1,3 @@
-//
-//  GeneralMethods.swift
-//  AbayaBazar
-//
-//  Created by iMac-4 on 7/14/17.
-//  Copyright © 2017 iMac-4. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

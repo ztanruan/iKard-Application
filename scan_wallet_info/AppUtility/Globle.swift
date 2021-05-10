@@ -1,11 +1,3 @@
-//
-//  Globle.swift
-//  RedButton
-//
-//  Created by Zignuts Technolab on 26/03/18.
-//  Copyright © 2018 Zignuts Technolab. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import AVFoundation

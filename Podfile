@@ -16,5 +16,6 @@ target 'scan_wallet_info' do
   pod 'Kingfisher'
   pod 'GoogleMaps'
   pod 'JGProgressHUD'
+  pod 'Mapbox-iOS-SDK', '~> 6.3.0'
 
 end

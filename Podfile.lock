@@ -347,6 +347,9 @@ PODS:
   - JGProgressHUD (2.2)
   - Kingfisher (6.3.0)
   - leveldb-library (1.22.1)
+  - Mapbox-iOS-SDK (6.3.0):
+    - MapboxMobileEvents (~> 0.10.4)
+  - MapboxMobileEvents (0.10.8)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -369,6 +372,7 @@ DEPENDENCIES:
   - GoogleMaps
   - JGProgressHUD
   - Kingfisher
+  - Mapbox-iOS-SDK (~> 6.3.0)
   - SDWebImage
   - SVProgressHUD
 
@@ -398,6 +402,8 @@ SPEC REPOS:
     - JGProgressHUD
     - Kingfisher
     - leveldb-library
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
     - nanopb
     - PromisesObjC
     - SDWebImage
@@ -428,11 +434,13 @@ SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
+  MapboxMobileEvents: 36ff53b135aac486eed94b61f813c7967a0c2c6f
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1cdcfa653682604ea84f1f3c2792f5e5b3a59e63
+PODFILE CHECKSUM: 882f32d98acebc28680b593827b745a806d48792
 
 COCOAPODS: 1.10.1
