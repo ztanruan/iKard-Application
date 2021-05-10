@@ -62,5 +62,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiaWthcmQiLCJhIjoiY2ttZ3FqajNqMDBhMjJ1bnd1ZG1henBtciJ9.wqiFKhW2qZUBUB5YfEFJ5w</string>
 </dict>
 </plist>
