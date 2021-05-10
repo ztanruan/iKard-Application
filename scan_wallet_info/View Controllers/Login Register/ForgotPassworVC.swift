@@ -38,7 +38,7 @@ class ForgotPassworVC: UIViewController, UITextFieldDelegate {
 
     //MARK: - Check Validation
     func checkInputValidations() -> (Title:String,Message:String)? {
-        let str_email = self.dicValue["email"] as? String ?? ""
+        let str_email = emailTextField.text!
         if str_email.trimed() == "" {
             return ("Email","Please enter email")
         }
