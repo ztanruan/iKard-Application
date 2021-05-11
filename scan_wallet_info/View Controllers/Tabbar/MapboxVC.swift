@@ -3,46 +3,99 @@ import Mapbox
 
 // Example view controller
 class MapboxVC: UIViewController, MGLMapViewDelegate {
+    
+    var arr_Data = [[String: Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let mapView = MGLMapView(frame: view.bounds)
         mapView.contentInset = UIEdgeInsets.zero
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.styleURL = MGLStyle.darkStyleURL
+        switch(3){
+        case 0:
+        mapView.styleURL = MGLStyle.satelliteStyleURL
+        case 1:
+        mapView.styleURL = MGLStyle.streetsStyleURL
+        case 2:
+        mapView.styleURL = MGLStyle.lightStyleURL
+        default:
+            mapView.styleURL = MGLStyle.darkStyleURL
+        }
         mapView.tintColor = .lightGray
         mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 0, longitude: 66)
         mapView.zoomLevel = 2
+        mapView.showsScale = true
         mapView.delegate = self
         view.addSubview(mapView)
     }
     
     
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView){
-        // Specify coordinates for our annotations.
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 0, longitude: 33),
-            CLLocationCoordinate2D(latitude: 0, longitude: 66),
-            CLLocationCoordinate2D(latitude: 0, longitude: 99)
-        ]
-
-        // Fill an array with point annotations and add it to the map.
-        var pointAnnotations = [MGLPointAnnotation]()
-        for coordinate in coordinates {
-            let point = MGLPointAnnotation()
-            point.coordinate = coordinate
-            point.title = "\(coordinate.latitude), \(coordinate.longitude)"
-            pointAnnotations.append(point)
+        
+        getCards(false){
+            
+            //var coordinates = [CLLocationCoordinate2D]()
+            /*
+            // Specify coordinates for our annotations.
+            let coordinates = [
+                CLLocationCoordinate2D(latitude: 0, longitude: 33),
+                CLLocationCoordinate2D(latitude: 0, longitude: 66),
+                CLLocationCoordinate2D(latitude: 0, longitude: 99)
+            ]
+            */
+            
+            // Fill an array with point annotations and add it to the map.
+            var pointAnnotations = [MGLPointAnnotation]()
+            
+            for card in self.arr_Data {
+                if (!(card["location"] as! Bool)) {continue}
+                let point = MGLPointAnnotation()
+                let coordinate = CLLocationCoordinate2D(
+                    latitude: card["latitude"] as! Double,
+                    longitude: card["longitude"] as! Double)
+                point.coordinate = coordinate
+                point.title = "\(card["name"] as! String)"
+                point.subtitle = "\(card["company"] as! String) \(card["phone"] as! String)"
+                pointAnnotations.append(point)
+            }
+            /*
+            for coordinate in coordinates {
+                let point = MGLPointAnnotation()
+                point.coordinate = coordinate
+                point.title = "\(coordinate.latitude), \(coordinate.longitude)"
+                pointAnnotations.append(point)
+            }
+            */
+            //mapView.showAnnotations(pointAnnotations, animated: true)
+            mapView.addAnnotations(pointAnnotations)
+        }
+    }
+    
+    func getCards(_ animate: Bool, completion:@escaping () -> Void) {
+        
+        if animate {
+            ShowProgressHud(message: AppMessage.plzWait)
         }
         
-        mapView.addAnnotations(pointAnnotations)
+        DispatchQueue.main.async {
+            FirebaseManager.shared.GetScannedBusinessCardsListFromFirebaseStorage() { (data) in
+                DismissProgressHud()
+                if let dataaa = data {
+                    self.arr_Data = dataaa
+                }
+                completion()
+            }
+        }
+        
     }
     
 
     // MARK: - MGLMapViewDelegate methods
 
     // This delegate method is where you tell the map to load a view for a specific annotation. To load a static MGLAnnotationImage, you would use `-mapView:imageForAnnotation:`.
-    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        /*
         // This example is only concerned with point annotations.
         guard annotation is MGLPointAnnotation else {
             return nil
@@ -65,6 +118,8 @@ class MapboxVC: UIViewController, MGLMapViewDelegate {
         }
         
         return annotationView
+        */
+        return MGLAnnotationImage(image: UIImage(named: "map-pin")!, reuseIdentifier: "\(annotation.coordinate.longitude)")
     }
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
