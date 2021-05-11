@@ -106,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
     func app_setLogin() {
         //SET LOGIN VIEWCONTROLLER TO ROOT
-        let login = Story_Main.instantiateViewController(withIdentifier: "navMain")
+        let login = Story_Main.instantiateViewController(withIdentifier: "navComtroller")
         self.animatedAddtoRoot(toView: login)
     }
        
