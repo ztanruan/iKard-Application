@@ -479,15 +479,20 @@ extension Create_BusinessCardStepVC: UITableViewDelegate, UITableViewDataSource,
             str_Titleee2 = "Company:"
             str_Titleee3 = "Position:"
             self.arr_section.append(["key": "header", "title": "TELL US LITTLE BIT MORE\nABOUT YOURSELF", "image": #imageLiteral(resourceName: "icon_1"), "identity": "image_header"])
+            self.arr_section.append(["key": str_Key1, "title": str_Titleee1, "identity": "text_field"])
+            self.arr_section.append(["key": str_Key2, "title": str_Titleee2, "identity": "text_field"])
+            self.arr_section.append(["key": str_Key3, "title": str_Titleee3, "identity": "text_field"])
         }
         else if appDelegate.int_CreateBusinessDetail == 1 {
             str_Key1 = "address"
-            str_Key2 = "city"
-            str_Key3 = "zipcode"
+            //str_Key2 = "city"
+            //str_Key3 = "zipcode"
             str_Titleee1 = "Address:"
-            str_Titleee2 = "City:"
-            str_Titleee3 = "Zipcode:"
+            //str_Titleee2 = "City:"
+            //str_Titleee3 = "Zipcode:"
             self.arr_section.append(["key": "header", "title": "TELL US ABOUT YOUR COMPANY", "image": #imageLiteral(resourceName: "icon_2"), "identity": "image_header"])
+            self.arr_section.append(["key": str_Key1, "title": str_Titleee1, "identity": "address_text_field"])
+            
         }
         else if appDelegate.int_CreateBusinessDetail == 2 {
             str_Key1 = "email"
@@ -497,12 +502,10 @@ extension Create_BusinessCardStepVC: UITableViewDelegate, UITableViewDataSource,
             str_Titleee2 = "Phone:"
             str_Titleee3 = "Secondary phone:"
             self.arr_section.append(["key": "header", "title": "HOW CAN YOUR CUSTOMER\nCONTACT YOU", "image": #imageLiteral(resourceName: "icon_2"), "identity": "image_header"])
+            self.arr_section.append(["key": str_Key1, "title": str_Titleee1, "identity": "text_field"])
+            self.arr_section.append(["key": str_Key2, "title": str_Titleee2, "identity": "text_field"])
+            self.arr_section.append(["key": str_Key3, "title": str_Titleee3, "identity": "text_field"])
         }
-        
-        self.arr_section.append(["key": str_Key1, "title": str_Titleee1, "identity": "text_field"])
-        self.arr_section.append(["key": str_Key2, "title": str_Titleee2, "identity": "text_field"])
-        self.arr_section.append(["key": str_Key3, "title": str_Titleee3, "identity": "text_field"])
-        
         
         if appDelegate.int_CreateBusinessDetail == 3 {
             self.arr_section.removeAll()
