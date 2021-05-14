@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 11/04/21.
-//
-
 import UIKit
 import Firebase
 import GoogleMaps
