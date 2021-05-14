@@ -235,6 +235,23 @@ extension FirebaseManager {
         })
     }
     
+    func GetAllBusinessCardsListFromFirebaseStorage(completion:@escaping ([[String: Any]]?)->Void) {
+        var arr_data = [[String: Any]]()
+        let ref = Database.database().reference(withPath: "business_detail")
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            if !snapshot.exists() {
+                completion(arr_data)
+            }
+            else {
+                for dataaa in snapshot.children.allObjects as! [DataSnapshot] {
+                    guard let restDict = dataaa.value as? [String: Any] else { continue }
+                    arr_data.append(restDict)
+                }
+                completion(arr_data)
+            }
+        })
+    }
+    
     func GetScannedBusinessCardsListFromFirebaseStorage(completion:@escaping ([[String: Any]]?)->Void) {
         var arr_data = [[String: Any]]()
         let ref = Database.database().reference(withPath: "scanned_business_detail").child(GetUserID())

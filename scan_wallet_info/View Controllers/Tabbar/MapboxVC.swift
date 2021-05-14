@@ -79,10 +79,14 @@ class MapboxVC: UIViewController, MGLMapViewDelegate {
         }
         
         DispatchQueue.main.async {
-            FirebaseManager.shared.GetScannedBusinessCardsListFromFirebaseStorage() { (data) in
+            FirebaseManager.shared.GetAllBusinessCardsListFromFirebaseStorage() { (data) in
                 DismissProgressHud()
                 if let dataaa = data {
-                    self.arr_Data = dataaa
+                    for dict in dataaa {
+                        for (_,v) in dict{
+                            self.arr_Data.append(v as! [String:Any])
+                        }
+                    }
                 }
                 completion()
             }
