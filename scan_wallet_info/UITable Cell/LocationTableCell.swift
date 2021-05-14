@@ -1,10 +1,3 @@
-//
-//  NewLocationTableCell.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 13/04/21.
-//
-
 import UIKit
 
 class LocationTableCell: UITableViewCell {

@@ -149,9 +149,31 @@ class Create_BusinessCardStepVC: UIViewController {
                 showSingleAlert(Title: error.Title, Message: error.Message, buttonTitle: AppMessage.Ok, delegate: self) { }
             }
             else {
-                appDelegate.int_CreateBusinessDetail = appDelegate.int_CreateBusinessDetail + 1
-                let objStep = Story_Main.instantiateViewController(withIdentifier: "Create_BusinessCardStepVC") as! Create_BusinessCardStepVC
-                self.navigationController?.pushViewController(objStep, animated: true)
+                
+                let str_address = appDelegate.dic_ValueforCreate_BusinessItem["address"] as? String ?? ""
+                
+                let geoCoder = CLGeocoder()
+                
+                geoCoder.geocodeAddressString(str_address) { (placemarks, error) in
+                    guard
+                        let placemarks = placemarks,
+                        let location = placemarks.first?.location
+                        
+                    else {
+                        print("INVALID ADDRESS")
+                        showSingleAlert(Title: "", Message: "Invalid Address", buttonTitle: AppMessage.Ok, delegate: self) { }
+                        return
+                    }
+                    print(location)
+                    appDelegate.longitude = location.coordinate.longitude
+                    appDelegate.latitude = location.coordinate.latitude
+                    
+                    appDelegate.int_CreateBusinessDetail = appDelegate.int_CreateBusinessDetail + 1
+                    let objStep = Story_Main.instantiateViewController(withIdentifier: "Create_BusinessCardStepVC") as! Create_BusinessCardStepVC
+                    self.navigationController?.pushViewController(objStep, animated: true)
+                }
+                
+                
             }
             
         }
@@ -343,66 +365,47 @@ class Create_BusinessCardStepVC: UIViewController {
             str_iddd = "primary_\(currentTimeInMiliseconds())id"
         }
         
-        var longitude = 0.0
-        var latitude = 0.0
         
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.geocodeAddressString(str_address) { (placemarks, error) in
-            guard
-                let placemarks = placemarks,
-                let location = placemarks.first?.location
-                
-            else {
-                print("NO LOCATION FOUND")
-                return
-            }
-            longitude = location.coordinate.longitude
-            latitude = location.coordinate.latitude
-            
-            var dic_businessData = ["name": str_name,
-                                    "company": str_company,
-                                    "position": str_position,
-                                    "address": str_address,
-                                    "city": str_city,
-                                    "zipcode": str_zipcode,
-                                    "email": str_email,
-                                    "phone": str_phone,
-                                    "secondary_phone": str_secondary_phone,
-                                    "background_image": background_pic,
-                                    "logo_image": logo_pic,
-                                    "profile_image": profile_pic,
-                                    "qr_code": qr_code,
-                                    "user_id": GetUserID(),
-                                    "location" : is_location,
-                                    "id": str_iddd,
-                                    "latitude": latitude,
-                                    "longitude": longitude] as [String : Any]
+        var dic_businessData = ["name": str_name,
+                                "company": str_company,
+                                "position": str_position,
+                                "address": str_address,
+                                "city": str_city,
+                                "zipcode": str_zipcode,
+                                "email": str_email,
+                                "phone": str_phone,
+                                "secondary_phone": str_secondary_phone,
+                                "background_image": background_pic,
+                                "logo_image": logo_pic,
+                                "profile_image": profile_pic,
+                                "qr_code": qr_code,
+                                "user_id": GetUserID(),
+                                "location" : is_location,
+                                "id": str_iddd,
+                                "latitude": appDelegate.latitude,
+                                "longitude": appDelegate.longitude] as [String : Any]
 
-            if appDelegate.create_business_screenFrom == .edit {
-                dic_businessData = ["name": str_name, "company": str_company, "position": str_position,
-                                    "address": str_address, "city": str_city, "zipcode": str_zipcode,
-                                    "email": str_email, "phone": str_phone, "secondary_phone": str_secondary_phone,
-                                    "background_image": background_pic, "logo_image": logo_pic, "profile_image": profile_pic, "location" : is_location,
-                                    "latitude": latitude, "longitude": longitude] as [String : Any]
+        if appDelegate.create_business_screenFrom == .edit {
+            dic_businessData = ["name": str_name, "company": str_company, "position": str_position,
+                                "address": str_address, "city": str_city, "zipcode": str_zipcode,
+                                "email": str_email, "phone": str_phone, "secondary_phone": str_secondary_phone,
+                                "background_image": background_pic, "logo_image": logo_pic, "profile_image": profile_pic, "location" : is_location,
+                                "latitude": appDelegate.latitude, "longitude": appDelegate.longitude] as [String : Any]
 
-                self.ref.child("business_detail").child(GetUserID()).child(str_iddd).updateChildValues(dic_businessData)
-            }
-            else {
-                self.ref.child("business_detail").child(GetUserID()).childByAutoId().updateChildValues(dic_businessData)
-            }
-            DismissProgressHud()
-            appDelegate.int_CreateBusinessDetail = 0
-            appDelegate.is_myProfileListRefresh = true
-            let viewControllers = self.navigationController!.viewControllers as [UIViewController]
-            for aViewController:UIViewController in viewControllers {
-                if aViewController.isKind(of: TabbarVC.self) {
-                    self.navigationController?.popToViewController(aViewController, animated: true)
-                }
+            self.ref.child("business_detail").child(GetUserID()).child(str_iddd).updateChildValues(dic_businessData)
+        }
+        else {
+            self.ref.child("business_detail").child(GetUserID()).childByAutoId().updateChildValues(dic_businessData)
+        }
+        DismissProgressHud()
+        appDelegate.int_CreateBusinessDetail = 0
+        appDelegate.is_myProfileListRefresh = true
+        let viewControllers = self.navigationController!.viewControllers as [UIViewController]
+        for aViewController:UIViewController in viewControllers {
+            if aViewController.isKind(of: TabbarVC.self) {
+                self.navigationController?.popToViewController(aViewController, animated: true)
             }
         }
-        
-        
     }
 
     //MARK: - UIButton Action Method

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  scan_wallet_info
-//
-//  Created by Teddys on 11/04/21.
-//
-
 import UIKit
 import Firebase
 import GoogleMaps
@@ -22,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dic_ValueforCreate_BusinessItem = [String: Any]()
     var int_CreateBusinessDetail = 0
     var is_myProfileListRefresh = false
+    var latitude = 0.0
+    var longitude = 0.0
     var currentLatitude = 0.0
     var currentLongitude = 0.0
     let googleMapsApiKey = "AIzaSyBUY2VH7-urnQaILzx-4ZvIPTfIR2Y_DSs"
