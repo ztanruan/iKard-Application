@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUg-sj-jL3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUg-sj-jL3">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-Z7-DlK">
-                                        <rect key="frame" x="22" y="12.666666666666664" width="292" height="35"/>
+                                        <rect key="frame" x="22" y="15.333333333333334" width="292" height="29.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                 <rect key="frame" x="22" y="741" width="370" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov5-Kp-bua">
-                                        <rect key="frame" x="156.33333333333334" y="13" width="57.666666666666657" height="24"/>
+                                        <rect key="frame" x="158.33333333333334" y="15" width="53.666666666666657" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -178,7 +178,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvc-YN-yle">
-                                        <rect key="frame" x="22" y="12.666666666666664" width="292" height="35"/>
+                                        <rect key="frame" x="22" y="15.333333333333334" width="292" height="29.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -224,7 +224,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoElongationCell" rowHeight="856" id="lef-Pa-hk9" userLabel="Elongation Cell" customClass="DemoElongationCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="856"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="856"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lef-Pa-hk9" id="2cp-8t-ddO">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="856"/>
@@ -255,7 +255,7 @@
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                     </subviews>
-                                                                                    <color key="backgroundColor" red="0.0" green="0.062745098040000002" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <color key="backgroundColor" red="0.94144356250000005" green="0.211705476" blue="0.47014087440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstItem="EeW-LD-8Eh" firstAttribute="centerX" secondItem="CNf-zA-4PW" secondAttribute="centerX" constant="25" id="4rg-D6-h8p"/>
                                                                                         <constraint firstItem="CNf-zA-4PW" firstAttribute="centerY" secondItem="C31-KT-sbU" secondAttribute="centerY" constant="65" id="chK-Uw-9fM"/>
@@ -652,7 +652,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juc-sP-Ew0">
-                                        <rect key="frame" x="22" y="12.666666666666664" width="292" height="35"/>
+                                        <rect key="frame" x="22" y="15.333333333333334" width="292" height="29.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -698,7 +698,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoElongationCell" rowHeight="856" id="KY2-2C-bYx" userLabel="Elongation Cell" customClass="DemoElongationCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="856"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="856"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KY2-2C-bYx" id="btm-3A-94x">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="856"/>
@@ -729,7 +729,7 @@
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                     </subviews>
-                                                                                    <color key="backgroundColor" red="0.0" green="0.062745098040000002" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <color key="backgroundColor" red="0.94144356250000005" green="0.211705476" blue="0.47014087440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstItem="qqO-CO-hV6" firstAttribute="centerY" secondItem="B0J-gP-OlM" secondAttribute="centerY" constant="65" id="30I-b4-JDS"/>
                                                                                         <constraint firstItem="9I2-Rd-vnP" firstAttribute="centerY" secondItem="qqO-CO-hV6" secondAttribute="centerY" id="HhV-6y-KHH"/>
@@ -1143,7 +1143,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header_TableCell" rowHeight="321" id="Kff-VL-5gV" customClass="Header_TableCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="321"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="321"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kff-VL-5gV" id="MeJ-F4-ISY">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="321"/>
@@ -1156,7 +1156,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELL US A LITTLE BIT MORE ABOUT YOURSELF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-zo-sKh">
-                                                            <rect key="frame" x="22" y="259" width="370" height="47"/>
+                                                            <rect key="frame" x="22" y="259" width="370" height="46.666666666666686"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1178,20 +1178,20 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFildTableCell" rowHeight="121" id="hEb-3o-22B" customClass="TextFildTableCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="345.33333396911621" width="414" height="121"/>
+                                                <rect key="frame" x="0.0" y="349" width="414" height="121"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hEb-3o-22B" id="WPJ-Hb-myq">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-ee-TMr">
-                                                            <rect key="frame" x="22" y="12" width="370" height="21"/>
+                                                            <rect key="frame" x="22" y="12.000000000000002" width="370" height="17.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guX-3F-LUK">
-                                                            <rect key="frame" x="22" y="45" width="370" height="40"/>
+                                                            <rect key="frame" x="22" y="41.666666666666664" width="370" height="39.999999999999993"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-6q-WCx">
                                                                     <rect key="frame" x="12" y="5" width="346" height="30"/>
@@ -1237,7 +1237,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectImageTableCell" rowHeight="221" id="OBx-eP-IXB" customClass="SelectImageTableCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="466.33333396911621" width="414" height="221"/>
+                                                <rect key="frame" x="0.0" y="470" width="414" height="221"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBx-eP-IXB" id="EQv-xV-Utt">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
@@ -1247,13 +1247,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-Ew-7sl">
-                                                                    <rect key="frame" x="22" y="7.9999999999999982" width="370" height="18.333333333333329"/>
+                                                                    <rect key="frame" x="22" y="8" width="370" height="15.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAY-3G-lWT" customClass="UIControl">
-                                                                    <rect key="frame" x="25" y="38.333333333333343" width="364" height="100"/>
+                                                                    <rect key="frame" x="25" y="35.333333333333343" width="364" height="100"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="syg-R5-PVb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="364" height="100"/>
@@ -1316,7 +1316,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationTableCell" rowHeight="221" id="98l-8U-rTn" customClass="LocationTableCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="687.33333396911621" width="414" height="221"/>
+                                                <rect key="frame" x="0.0" y="691" width="414" height="221"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="98l-8U-rTn" id="bJO-jH-7V4">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
@@ -1326,13 +1326,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background image" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyO-NJ-z5q">
-                                                                    <rect key="frame" x="22" y="14.999999999999998" width="370" height="18.333333333333329"/>
+                                                                    <rect key="frame" x="22" y="15" width="370" height="15.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-dt-JJF">
-                                                                    <rect key="frame" x="343" y="8.6666666666666643" width="51" height="31"/>
+                                                                    <rect key="frame" x="343" y="7.3333333333333321" width="51" height="30.999999999999996"/>
                                                                 </switch>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1359,7 +1359,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NextButtonTableCell" rowHeight="121" id="qok-tQ-Kb9" customClass="NextButtonTableCell" customModule="scan_wallet_info" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="908.33333396911621" width="414" height="121"/>
+                                                <rect key="frame" x="0.0" y="912" width="414" height="121"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qok-tQ-Kb9" id="SM3-O0-v7C">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
@@ -1369,7 +1369,7 @@
                                                             <rect key="frame" x="22" y="19" width="370" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZH-qw-Meg">
-                                                                    <rect key="frame" x="165.33333333333334" y="13.666666666666666" width="39.666666666666657" height="22.666666666666671"/>
+                                                                    <rect key="frame" x="165.33333333333334" y="15.666666666666666" width="39.666666666666657" height="18.666666666666671"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1955,7 +1955,7 @@
                                         </cells>
                                     </collectionView>
                                     <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pVH-dc-e29">
-                                        <rect key="frame" x="147" y="598" width="120.33333333333331" height="26.333333333333371"/>
+                                        <rect key="frame" x="146.33333333333334" y="598" width="121.33333333333334" height="26.333333333333371"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" red="0.33725490200000002" green="0.40000000000000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </pageControl>
