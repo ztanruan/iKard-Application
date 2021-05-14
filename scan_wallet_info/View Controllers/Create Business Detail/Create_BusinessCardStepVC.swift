@@ -53,16 +53,6 @@ class Create_BusinessCardStepVC: UIViewController {
         self.view.layoutIfNeeded()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     //MARK: - Check Validation for Step 1
     func checkInputValidationsforStep1() -> (Title:String, Message:String)? {
         let str_name = appDelegate.dic_ValueforCreate_BusinessItem["name"] as? String ?? ""
