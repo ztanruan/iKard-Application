@@ -2,7 +2,6 @@ import UIKit
 import Firebase
 
 class HomeVC: UIViewController, UITextFieldDelegate {
-
     var is_openCell = false
     var strIndx: String? = nil
     var cellHeight: CGFloat = 0.0
@@ -96,16 +95,6 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     //MARK: - UIButton Action Method
     @IBAction func btn_Add_Action(_ sender: UIControl) {
@@ -245,5 +234,4 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
 
     }
-
 }

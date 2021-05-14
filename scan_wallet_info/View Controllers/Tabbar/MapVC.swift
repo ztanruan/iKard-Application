@@ -4,13 +4,11 @@ import GoogleMaps
 import CoreLocation
 
 class MapVC: UIViewController, GMSMapViewDelegate {
-
     var clusterManager: GMUClusterManager?
     var arr_Data = [[String: Any]]()
     @IBOutlet weak var btn_Add: UIControl!
     let locationManager = CLLocationManager()
     @IBOutlet weak var view_BaseMapView: GMSMapView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +44,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.getScannedBusinseeCard(false)
     }
     
-    
     func getParticular_BusinessCard_fromQRCode(_ qr_code: String) {
         
         appDelegate.str_scannedQR_CODE = ""
@@ -62,7 +59,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func getScannedBusinseeCard(_ animate: Bool) {
-        
         if animate {
             ShowProgressHud(message: AppMessage.plzWait)
         }
@@ -85,17 +81,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     //MARK: - UIButton Action Method
     @IBAction func btn_Add_Action(_ sender: UIControl) {
         let objScan = Story_Main.instantiateViewController(withIdentifier: "ScanVC") as! ScanVC
@@ -140,9 +126,6 @@ extension MapVC: CLLocationManagerDelegate {
         print("location manager authorization status changed")
 
         if status == .authorizedAlways || status == .authorizedWhenInUse {
-            //print("user allow app to get location data only when app is active")
-            //print("user allow app to get location data when app is active or in background")
-
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
                 self.setCurrentLocation()
                 self.getScannedBusinseeCard(true)
@@ -202,14 +185,10 @@ extension MapVC: GMUClusterManagerDelegate, GMUClusterIconGenerator, GMUClusterR
     }
 
     func setupClusterManager() {
-        // Register self to listen to both GMUClusterManagerDelegate and GMSMapViewDelegate events.
-        // Set up the cluster manager with the supplied icon generator and renderer.
         let clusterIconImage = #imageLiteral(resourceName: "icon_blue_circle")
         let imagesArray = [clusterIconImage]
         let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [99], backgroundImages: imagesArray)
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        // Generate and add random items to the cluster manager.
-        // Call cluster() after items have been added to perform the clustering and rendering on map.
         guard let mapView = self.view_BaseMapView else { return }
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         renderer.delegate = self

@@ -9,7 +9,6 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         //Set Image For Bottom Tab
         self.delegate = self
         
@@ -49,17 +48,6 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print(tabBarController.selectedIndex)

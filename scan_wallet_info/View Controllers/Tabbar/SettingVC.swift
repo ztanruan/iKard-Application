@@ -10,17 +10,6 @@ class SettingVC: UIViewController {
         self.btn_logout.backgroundColor = AppColor.blue
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func AlertLogOut() {
         
         let alert = UIAlertController.init(title: nil, message: "", preferredStyle: UIAlertController.Style.alert)

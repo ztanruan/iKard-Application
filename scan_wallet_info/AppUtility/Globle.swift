@@ -181,13 +181,9 @@ func getCurrentDate_TimeForChat() -> Date {
     return str_Date ?? Date()
 }
 
-
-
-
 func getCurrentMillis(date: Date)->Int64{
     return  Int64(date.timeIntervalSince1970 * 1000)
 }
-
 
 //MARK:- UIALERT VIEW
 func showSingleAlert(Title:String, Message:String, buttonTitle:String, delegate:UIViewController? = appDelegate.window?.rootViewController, completion:@escaping ()->Void) {
@@ -201,14 +197,11 @@ func showSingleAlert(Title:String, Message:String, buttonTitle:String, delegate:
     }
 }
 
-
 func showGlobalToast(Message:String, delegate:UIViewController? = appDelegate.window?.rootViewController) {
     if let parentVC = delegate {
         parentVC.view.makeToast(Message)
     }
 }
-
-
 
 //MARK:- JSON METHOD
 func jsonToStringFrom(from object:Any) -> String? {
@@ -317,17 +310,10 @@ func isValidPassword(password:String) -> Bool {
 }
 
 func isValidValue(_ object:Any? = nil) -> Bool{
-    if object == nil{
-        return false
-    }
-    
-    if object as? NSNull != nil{
-        return false
-    }
-    
+    if object == nil{ return false }
+    if object as? NSNull != nil{ return false }
     return true
 }
-
 
 //MARK:- Get Distance from One latitude or longitude
 func getDistanceBetweenTwoLat_Long(firstLat_long: CLLocationCoordinate2D, secondLat_long: CLLocationCoordinate2D) -> String {
@@ -350,9 +336,7 @@ func getDistanceBetweenTwoLat_Long(firstLat_long: CLLocationCoordinate2D, second
 
 
 //MARK:- Session Helper
-
 func clearDataOnLogout() {
-    
     //Removes persistant login detail from userdefault
     UIApplication.shared.applicationIconBadgeNumber = 0
     UserDefaults.appRemoveObjectForKey(AppMessage.uID)
@@ -376,7 +360,6 @@ func verifyUrl (urlString: String?) -> Bool {
 
 
 func getCountryPhonceCode (_ country : String) -> String {
-    
     var countryDictionary  = ["AF":"93",
                               "AL":"355",
                               "DZ":"213",
@@ -623,7 +606,6 @@ func getCountryPhonceCode (_ country : String) -> String {
     else {
         return ""
     }
-    
 }
 
 
@@ -650,9 +632,7 @@ extension Double {
 
 
 extension UITableView {
-
     func scrollToBottom(){
-
         DispatchQueue.main.async {
             var roww = self.numberOfRows(inSection:  self.numberOfSections-1)
             if roww != 0 {
@@ -664,7 +644,6 @@ extension UITableView {
     }
 
     func scrollToTop() {
-
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: 0, section: 0)
             self.scrollToRow(at: indexPath, at: .top, animated: false)

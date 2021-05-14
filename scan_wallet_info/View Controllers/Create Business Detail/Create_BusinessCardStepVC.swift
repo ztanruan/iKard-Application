@@ -762,7 +762,6 @@ extension Create_BusinessCardStepVC: UINavigationControllerDelegate, UIImagePick
 
 //MARK: - API CALL
 extension Create_BusinessCardStepVC {
-    
     //MARK: Upload image
     func ImageUpload_onFirebaseStorage(_ img: UIImage, keyName: String, FolderName: String, completion:@escaping (Bool)->Void) {
         if let uploadImgData = img.jpegData(compressionQuality: 0.5) {
