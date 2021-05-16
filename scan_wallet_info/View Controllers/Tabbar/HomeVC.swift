@@ -63,7 +63,6 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     
     func getParticular_BusinessCard_fromQRCode(_ qr_code: String) {
-        
         appDelegate.str_scannedQR_CODE = ""
         ShowProgressHud(message: AppMessage.plzWait)
         DispatchQueue.main.async {
@@ -77,7 +76,6 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     }
     
     func getScannedBusinseeCard(_ animate: Bool) {
-        
         if animate {
             ShowProgressHud(message: AppMessage.plzWait)
         }

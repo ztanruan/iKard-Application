@@ -8,8 +8,6 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //Set Image For Bottom Tab
         self.delegate = self
         
         if let count = self.tabBar.items?.count {
@@ -52,6 +50,35 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print(tabBarController.selectedIndex)
         if selectedViewController != nil && viewController != selectedViewController {
+            return
+        }
+        if(tabBarController.selectedIndex == 3){
+            tabBarController.tabBar.isHidden = true
+            let alert = UIAlertController.init(title: nil, message: "", preferredStyle: UIAlertController.Style.alert)
+            
+            let attributedMessage = NSMutableAttributedString(string: "Are you sure you want to logout?", attributes: [NSAttributedString.Key.font: UIFont.AppFontMedium(16)])
+            alert.setValue(attributedMessage, forKey: "attributedMessage")
+            
+            let actionCancel = UIAlertAction.init(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                tabBarController.tabBar.isHidden = false
+                tabBarController.selectedIndex = 0
+            })
+            
+            let actionOK = UIAlertAction.init(title: "Logout", style: UIAlertAction.Style.destructive, handler: { (action) in
+                clearDataOnLogout()
+                appDelegate.app_setLogin()
+            })
+            
+            alert.addAction(actionOK)
+            alert.addAction(actionCancel)
+            appDelegate.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            for textfield: UIView in (alert.textFields ?? [])! {
+                let container: UIView = textfield.superview!
+                let effectView: UIView = container.superview!.subviews[0]
+                container.backgroundColor = UIColor.clear
+                effectView.removeFromSuperview()
+            }
         }
     }
     
