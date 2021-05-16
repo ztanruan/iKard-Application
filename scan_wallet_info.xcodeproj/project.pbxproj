@@ -17,7 +17,6 @@
 		001783C126233A61007BE6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001783C026233A61007BE6A3 /* Assets.xcassets */; };
 		001783C426233A61007BE6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001783C226233A61007BE6A3 /* LaunchScreen.storyboard */; };
 		0048DB392626180F00856188 /* LocationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048DB382626180F00856188 /* LocationTableCell.swift */; };
-		005B4FED26276B6A0022B1B8 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005B4FEC26276B6A0022B1B8 /* SettingVC.swift */; };
 		0088E833263DDA52008D0D79 /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0088E7ED263DDA51008D0D79 /* GMUClusterManager.m */; };
 		0088E834263DDA52008D0D79 /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0088E7F2263DDA51008D0D79 /* GMUGridBasedClusterAlgorithm.m */; };
 		0088E835263DDA52008D0D79 /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 0088E7F5263DDA51008D0D79 /* GMUWrappingDictionaryKey.m */; };
@@ -133,7 +132,6 @@
 		001783C326233A61007BE6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		001783C526233A61007BE6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0048DB382626180F00856188 /* LocationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableCell.swift; sourceTree = "<group>"; };
-		005B4FEC26276B6A0022B1B8 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		0088E7E5263DDA3D008D0D79 /* scan_wallet_info-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "scan_wallet_info-Bridging-Header.h"; sourceTree = "<group>"; };
 		0088E7ED263DDA51008D0D79 /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
 		0088E7EE263DDA51008D0D79 /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
@@ -520,7 +518,6 @@
 				00F994F4262344F400E975B0 /* TabbarVC.swift */,
 				00F994F6262344F400E975B0 /* HomeVC.swift */,
 				0088E850263DDD86008D0D79 /* MapVC.swift */,
-				005B4FEC26276B6A0022B1B8 /* SettingVC.swift */,
 				00F994F3262344F400E975B0 /* ProfileVC.swift */,
 				D06E89022648E2340068A236 /* MapboxVC.swift */,
 			);
@@ -930,7 +927,6 @@
 				00F99596262348E800E975B0 /* PreviewViewController.swift in Sources */,
 				00F99599262348E800E975B0 /* PlayerView.swift in Sources */,
 				0048DB392626180F00856188 /* LocationTableCell.swift in Sources */,
-				005B4FED26276B6A0022B1B8 /* SettingVC.swift in Sources */,
 				0088E846263DDA52008D0D79 /* GMUPoint.m in Sources */,
 				001783B826233A5F007BE6A3 /* AppDelegate.swift in Sources */,
 				0088E835263DDA52008D0D79 /* GMUWrappingDictionaryKey.m in Sources */,
