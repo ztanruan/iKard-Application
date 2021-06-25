@@ -8,5 +8,6 @@ iKard mobile app provides solutions for all the problems described above. Based 
 
 The onboarding screen of the application allows the user to learn about the app and the features of the application. Users can go through the entire onboarding or skip the onboarding section to go directly to the sign-up screen of the application.
 
+
 ![Screen Shot 2021-06-25 at 6 19 50 PM](https://user-images.githubusercontent.com/28322834/123490441-0188cd80-d5e2-11eb-87eb-b639fd00f866.png)
 
