@@ -20,3 +20,6 @@ Users will be able go on the map within the app to find other business cards in 
 
 Each business card the user creates will generates a QR code associated with content of the business card. User can share their QR code to other users to scan and will automatically add the business card to wallet. It saves times for users to exchange business card and can be accessed online, where users can directly scan QR code shared on the internet and add to their wallet.
 
+
+[Final_report_iKardSSR.pdf](https://github.com/ztanruan/iKard-Application/files/6719040/Final_report_iKardSSR.pdf)
+
