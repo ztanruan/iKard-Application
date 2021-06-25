@@ -8,6 +8,15 @@ iKard mobile app provides solutions for all the problems described above. Based 
 
 The onboarding screen of the application allows the user to learn about the app and the features of the application. Users can go through the entire onboarding or skip the onboarding section to go directly to the sign-up screen of the application.
 
+- Registration and Login
 
-![Screen Shot 2021-06-25 at 6 19 50 PM](https://user-images.githubusercontent.com/28322834/123490441-0188cd80-d5e2-11eb-87eb-b639fd00f866.png)
+On the registration screen, users can register for a new account using email and password. Users cannot sign for two accounts with the same email. If the email is already in used, the app will let the user know the email is already registered. Returned users can log in to their account using email and password. If the user doesn’t remember the password, the user can reset the password on the reset view. The user will receive an email with the steps to reset their account password.
+
+- Mapbox Implementaion
+
+Users will be able go on the map within the app to find other business cards in the location to look for other professionals and promote their own business or service. User can see their business card contact from the wallet inside the map view on the app. Currently, users can only see one card in the exact location. But users can tap on the location to see the following business card contact on that location on the map.
+
+- QR Code Implementation
+
+Each business card the user creates will generates a QR code associated with content of the business card. User can share their QR code to other users to scan and will automatically add the business card to wallet. It saves times for users to exchange business card and can be accessed online, where users can directly scan QR code shared on the internet and add to their wallet.
 
